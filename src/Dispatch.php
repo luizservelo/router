@@ -166,6 +166,10 @@ abstract class Dispatch
             $post = filter_input_array(INPUT_POST, FILTER_DEFAULT);
             $postJson = json_decode(file_get_contents('php://input'), true);
 
+            $get = is_array($get) ? $get : [];
+            $post = is_array($post) ? $post : [];
+            $postJson = is_array($postJson) ? $postJson : [];
+
             $this->data = array_merge($postJson, $post, $get);
             return;
         }
