@@ -1,6 +1,6 @@
 <?php
 
-namespace CoffeeCode\Router;
+namespace Wallygator\Router;
 
 /**
  * Class CoffeeCode Dispatch
